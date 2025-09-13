@@ -1,0 +1,72 @@
+# TRON SunSwap Automation Bot Configuration
+# Copy this file to config.toml and update with your settings
+
+[network]
+# TRON mainnet RPC endpoint
+rpc_url = "https://api.trongrid.io"
+# Alternative RPC endpoints for failover
+backup_rpc_urls = [
+    "https://api.tronstack.io",
+    "https://tron-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205"
+]
+
+[contracts]
+# SunSwap Router contract address
+router_address = "TKzxdSv2FZKQrEqkKVgp5DcwEXBEKMg2Ax"
+# USDT (TRC20) contract address
+usdt_address = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
+# Orbit Dollar (ODT) contract address
+odt_address = "YOUR_ODT_CONTRACT_ADDRESS_HERE"
+# SunSwap Factory contract address
+factory_address = "TQn9Y2khEsLJW1ChVWFMSMeRDow5KcbLSE"
+
+[risk_controls]
+# Maximum transaction size in TRX
+max_tx_size_trx = 1000.0
+# Maximum transaction size in USDT
+max_tx_size_usdt = 1000.0
+# Maximum transaction size in ODT
+max_tx_size_odt = 1000000.0
+# Slippage tolerance (0.01 = 1%)
+slippage_tolerance = 0.01
+# Transaction deadline in seconds
+tx_deadline = 300
+# Minimum delay between transactions (seconds)
+min_delay_seconds = 30
+# Maximum delay between transactions (seconds)
+max_delay_seconds = 300
+# Maximum retry attempts
+max_retries = 3
+# Retry delay multiplier
+retry_delay_multiplier = 2.0
+
+[trading]
+# Daily swap volume target in USD
+daily_swap_volume_usd = 250000
+# Daily liquidity operations target in USD
+daily_liquidity_volume_usd = 500000
+# Minimum trade size in USD
+min_trade_size_usd = 100
+# Maximum trade size in USD
+max_trade_size_usd = 5000
+# Trading hours (24-hour format)
+trading_start_hour = 0
+trading_end_hour = 23
+
+[airdrop]
+# Default airdrop amount in ODT tokens
+default_airdrop_amount = 1000.0
+# Gas limit for airdrop transactions
+airdrop_gas_limit = 100000
+# Batch size for airdrop transactions
+batch_size = 10
+
+[logging]
+# Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+log_level = "INFO"
+# Log file path
+log_file = "logs/bot.log"
+# Maximum log file size in MB
+max_log_size_mb = 10
+# Number of log files to keep
+backup_count = 5

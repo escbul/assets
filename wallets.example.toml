@@ -1,0 +1,26 @@
+# Wallet Configuration for TRON SunSwap Automation Bot
+# Copy this file to wallets.toml and add your actual private keys
+# NEVER commit wallets.toml to version control!
+
+[wallets]
+# Wallet 1 - Primary trading wallet
+wallet_1 = "YOUR_PRIVATE_KEY_HERE"
+# Wallet 2 - Secondary trading wallet
+wallet_2 = "YOUR_PRIVATE_KEY_HERE"
+# Wallet 3 - Liquidity management wallet
+wallet_3 = "YOUR_PRIVATE_KEY_HERE"
+# Wallet 4 - Airdrop distribution wallet
+wallet_4 = "YOUR_PRIVATE_KEY_HERE"
+# Wallet 5 - Backup trading wallet
+wallet_5 = "YOUR_PRIVATE_KEY_HERE"
+
+# Wallet rotation settings
+[rotation]
+# Enable wallet rotation for transactions
+enable_rotation = true
+# Minimum balance required in TRX for wallet to be active
+min_balance_trx = 10.0
+# Minimum balance required in USDT for trading
+min_balance_usdt = 100.0
+# Minimum balance required in ODT for trading
+min_balance_odt = 1000.0
